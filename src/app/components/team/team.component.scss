@@ -1,0 +1,95 @@
+.team-section {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  min-width: 10px;
+  text-align: center;
+
+  .team-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff740b;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+
+    .team-member {
+      background: linear-gradient(145deg, #2e2e2e, #232323);
+      border-radius: 16px;
+      padding: 2rem;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+      }
+
+      .member-photo {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 1.5rem;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid #ff740b;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .member-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0.5rem 0;
+        color: #ffffff;
+      }
+
+      .member-role {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #ff740b;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+
+      .member-description {
+        font-size: 0.9rem;
+        color: #dcdcdc;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+
+      .contact-button {
+        padding: 0.8rem 1.2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #ff740b;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #ff5a00;
+        }
+      }
+    }
+  }
+}

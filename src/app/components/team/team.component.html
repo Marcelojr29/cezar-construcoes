@@ -1,1 +1,14 @@
-<p>team works!</p>
+<div class="team-section">
+  <h1 class="team-title">Saiba mais sobre nossa equipe</h1>
+  <div class="team-grid">
+    <div class="team-member" *ngFor="let member of teamMembers">
+      <div class="member-photo">
+        <img [src]="member.photo" [alt]="member.name" />
+      </div>
+      <h2 class="member-name">{{ member.name }}</h2>
+      <p class="member-role">{{ member.role }}</p>
+      <p class="member-description">{{ member.description }}</p>
+      <button class="contact-button">Contato</button>
+    </div>
+  </div>
+</div>
