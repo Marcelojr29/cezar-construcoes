@@ -1,0 +1,85 @@
+.contact-wrapper {
+  display: flex;
+  justify-content: flex-end; // Alinha à direita
+  align-items: center;
+  min-height: 100vh; // Garantir altura total
+  padding: 1rem;
+  background-color: #f8f9fa;
+
+  .contact-container {
+    width: 100%;
+    max-width: 400px; // Define largura máxima do formulário
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+
+    .contact-title {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+      strong {
+        color: #f57c00; // Cor destaque
+      }
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 20px 10px;
+      font-size: 16px;
+      box-sizing: border-box;
+
+      .input-field {
+        width: 100%;
+        height: 75px;
+
+        .mat-input {
+          padding: 10px 12px;
+          line-height: 55px;
+          font-size: 16px;
+        }
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+
+
+        .submit-button {
+          width: 100%;
+          font-weight: bold;
+          color: #000;
+          background-color: #f57c00;
+        }
+      }
+
+      .info-secure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 1rem;
+
+        mat-icon {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Responsividade
+@media (max-width: 768px) {
+  .contact-wrapper {
+    justify-content: center; // Centraliza no mobile
+    padding: 0.5rem;
+
+    .contact-container {
+      width: 90%;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<div class="about">
+  <section class="about-intro">
+    <div class="intro-text" data-aos="fade-right">
+      <h1 class="highlight">CEZAR: seu projeto, nossa paixão.</h1>
+      <p>
+        Em nossa empresa, situada em Manaus, a construção vai além da simples execução
+        de projetos. Somos artesãos de sonhos, dedicados a transformar suas ideias em realidade.
+        <br>
+        Com uma equipe especializada de arquitetos e engenheiros civis, oferecemos serviços completos
+        de construção civil.
+        <br>
+        Seja para construir a casa dos seus sonhos, reformar ambientes ou desenvolver projetos comerciais,
+        viemos oferecer soluções personalizadas e de alta qualidade que atendam às suas necessidades.
+        <br>
+      </p>
+      <button class="slider" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+        <span (click)="scrollToContact('contato')">Quero fazer um orçamento</span>
+        <svg width="15px" height="10px" viewBox="0 0 13 10">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+    </button>
+    </div>
+    <div class="intro-image" data-aos="fade-left">
+      <img
+        src="assets/icons/CEZAR_LOGO.png"
+        alt="Construção moderna"
+      />
+    </div>
+  </section>
+
+  <section class="about-values">
+    <div class="value-card" data-aos="fade-up" *ngFor="let item of values">
+      <div class="card-icon">
+        <img [src]="item.icon" [alt]="item.title" />
+      </div>
+      <div class="card-content">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </section>
+</div>
