@@ -1,35 +1,45 @@
 .about {
-  padding: 2rem;
-  background: #f9f9f9;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #ffffff;
+  padding: 4rem 2rem;
 
-  .about-intro {
+  .about-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 3rem;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 
-    .intro-text {
+    .about-image {
       flex: 1;
-      max-width: 600px;
+      max-width: 500px;
+      border: 5px solid #1c1c1c; // Moldura preta
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
-      h1 {
-        font-family: Arial, Helvetica, sans-serif;
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+      }
+    }
+
+    .about-content {
+      flex: 1;
+      padding-left: 1rem;
+
+      .highlight {
         font-size: 2.5rem;
-        font-weight: 700;
+        font-weight: bold;
         color: #ff740b;
+        margin-bottom: 1.5rem;
       }
 
       p {
-        font-size: 1.2rem;
-        line-height: 1.8;
-        margin: 1.5rem 0;
-        color: #555;
+        font-size: 1.1rem;
+        color: #333333;
+        line-height: 1.6;
+        margin-bottom: 1rem;
       }
 
       .slider {
@@ -65,7 +75,7 @@
         font-size: 18px;
         font-weight: 700;
         letter-spacing: 0.05em;
-        color: var(--color-gray1);
+        color: var(--color-black);
       }
 
       .slider svg {
@@ -93,59 +103,6 @@
 
       .slider:active {
         transform: scale(0.95);
-      }
-    }
-
-    .intro-image {
-      flex: 1;
-      max-width: 500px;
-
-      img {
-        width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        object-fit: cover;
-      }
-    }
-  }
-
-  .about-values {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    width: 100%;
-    max-width: 1200px;
-
-    .value-card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      padding: 2rem;
-      text-align: center;
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: translateY(-10px);
-      }
-
-      .card-icon {
-        margin-bottom: 1rem;
-
-        img {
-          width: 50px;
-          height: 50px;
-        }
-      }
-
-      h3 {
-        font-size: 1.5rem;
-        color: #004aad;
-        margin-bottom: 1rem;
-      }
-
-      p {
-        font-size: 1rem;
-        color: #666;
       }
     }
   }

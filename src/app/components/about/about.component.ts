@@ -27,11 +27,7 @@ export class AboutComponent {
   scrollToContact(sectionId: string) {
     const section = document.getElementById(sectionId);
     if (section) {
-      const offsetTop = section.offsetTop;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth'
-      });
+      section.scrollIntoView({ behavior: 'smooth' });
     }
   }
 }
