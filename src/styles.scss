@@ -1,7 +1,8 @@
 :root {
-  --font-grande: 'TT Hoves Pro Trial', sans-serif;
-  --font-pequena: 'ClashGrotesk-Light', sans-serif;
-  --color-black: #000;
+  --fonte-grande: 'TT Hoves Pro Trial', sans-serif;
+  --fonte-pequena: 'ClashGrotesk-Light', sans-serif;
+  --color-black: #1E1E1E;
+  --color-black2: #333333;
   --color-gray1: #3d4143;
   --color-gray2: #9c9d9d;
   --color-white: #f6f6f6;
@@ -9,62 +10,48 @@
   --color-slide: #ff740b;
 }
 
-body {
-  background-color: var(--color-white);
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.section-sobre {
+body {
+  background-color: var(--color-black2);
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
+  color: var(--color-white);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-black);
+}
+
+main {
+  overflow-x: hidden;
+}
+
+.section {
   height: 100vh;
   padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  background-color: #f5f5f5;
+  background-color: var(--color-black2);
 
   &:nth-child(odd) {
-    background-color: #fefefe;
+    background-color: var(--color-black);
   }
 }
 
-.section-servicos {
-  height: 100vh;
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  background-color: #f5f5f5;
-}
-
-.section-portfolio {
-  height: 100vh;
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  background-color: #f5f5f5;
-}
-
-.section-equipe {
-  height: 100vh;
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  background-color: #f5f5f5;
-}
-
-.section-contato {
-  height: 100vh;
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  background-color: #f5f5f5;
+footer {
+  background-color: var(--color-black);
+  color: var(--color-gray2);
+  text-align: center;
+  padding: 1rem;
 }
 
 .back-to-top {
@@ -136,16 +123,55 @@ body {
   }
 }
 
-html,
-body {
-  height: 100%;
+@media (max-width: 1024px) {
+  section {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
 
+  .back-to-top,
+  .whatsapp-button {
+    width: 50px;
+    height: 50px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
 
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
+
+  .back-to-top,
+  .whatsapp-button {
+    width: 45px;
+    height: 45px;
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@media (max-width: 480px) {
+  .back-to-top {
+    bottom: 15px;
+    left: 15px;
+  }
+
+  .whatsapp-button {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  section {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}

@@ -42,7 +42,7 @@ body {
 
 .title {
   font-size: clamp(1rem, 2.5vw + .8rem, 3rem);
-  font-family: var(--font-grande);
+  font-family: var(--fonte-grande);
   font-weight: normal;
   color: #fff;
   justify-content: flex-start;
@@ -85,7 +85,7 @@ body {
 
 .slider span {
   position: relative;
-  font-family: var(--font-pequena);
+  font-family: var(--fonte-pequena);
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.05em;

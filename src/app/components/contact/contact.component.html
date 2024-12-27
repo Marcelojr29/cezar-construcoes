@@ -1,80 +1,108 @@
 <div class="contact-wrapper">
-  <!-- Container principal -->
+  <!-- Seção Principal -->
   <div class="contact-container">
-    <h2 class="contact-title">
-      Faça seu orçamento com a <strong>CEZAR CONSTRUÇÕES</strong>!
-    </h2>
+
+    <!-- Aba lateral -->
+    <div class="contact-left">
+      <h2>Por que escolher a CEZAR CONSTRUÇÕES?</h2>
+      <p>Com mais de 20 anos de experiência, oferecemos:</p>
+      <ul>
+        <li>
+          <mat-icon color="primary" class="icon">construction</mat-icon>
+          Construção de alto padrão
+        </li>
+        <li>
+          <mat-icon color="primary" class="icon">engineering</mat-icon>
+          Equipe qualificada e projetos personalizados
+        </li>
+        <li>
+          <mat-icon color="primary" class="icon">verified</mat-icon>
+          Garantia de qualidade e satisfação
+        </li>
+        <li>
+          <mat-icon color="primary" class="icon">schedule</mat-icon>
+          Entrega dentro do prazo
+        </li>
+      </ul>
+      <p>Transforme seu sonho em realidade com a nossa equipe!</p>
+    </div>
 
     <!-- Formulário -->
-    <form class="contact-form" (ngSubmit)="onSubmit()">
-      <!-- Nome -->
-      <mat-form-field appearance="outline" class="input-field">
-        <mat-label>Nome</mat-label>
-        <input
-          matInput
-          placeholder="Insira seu nome completo"
-          [(ngModel)]="formData.name"
-          name="name"
-          required
-        />
-      </mat-form-field>
+    <div class="contact-right">
+      <h2 class="contact-title">
+        Faça seu orçamento com a <strong>CEZAR CONSTRUÇÕES</strong>!
+      </h2>
 
-      <!-- Email -->
-      <mat-form-field appearance="outline" class="input-field">
-        <mat-label>E-mail</mat-label>
-        <input
-          matInput
-          placeholder="Digite seu melhor e-mail"
-          type="email"
-          [(ngModel)]="formData.email"
-          name="email"
-          required
-        />
-      </mat-form-field>
+      <form class="contact-form" (ngSubmit)="onSubmit()">
+        <!-- Nome -->
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Nome</mat-label>
+          <input
+            matInput
+            placeholder="Insira seu nome completo"
+            [(ngModel)]="formData.name"
+            name="name"
+            required
+          />
+        </mat-form-field>
 
-      <!-- Telefone -->
-      <mat-form-field appearance="outline" class="input-field">
-        <mat-label>Telefone</mat-label>
-        <input
-          matInput
-          placeholder="Ex: (92) 91234-5678"
-          type="tel"
-          [(ngModel)]="formData.phone"
-          name="phone"
-          required
-        />
-      </mat-form-field>
+        <!-- Email -->
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>E-mail</mat-label>
+          <input
+            matInput
+            placeholder="Digite seu melhor e-mail"
+            type="email"
+            [(ngModel)]="formData.email"
+            name="email"
+            required
+          />
+        </mat-form-field>
 
-      <!-- Mensagem -->
-      <mat-form-field appearance="outline" class="input-field">
-        <mat-label>Mensagem</mat-label>
-        <textarea
-          matInput
-          rows="3"
-          placeholder="Insira sua mensagem"
-          [(ngModel)]="formData.message"
-          name="message"
-          required
-        ></textarea>
-      </mat-form-field>
+        <!-- Telefone -->
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Telefone</mat-label>
+          <input
+            matInput
+            placeholder="Ex: (92) 91234-5678"
+            type="tel"
+            [(ngModel)]="formData.phone"
+            name="phone"
+            required
+          />
+        </mat-form-field>
 
-      <!-- Botão de envio -->
-      <div class="button-container">
-        <button
-          mat-raised-button
-          color="primary"
-          type="submit"
-          class="submit-button"
-        >
-          ENVIAR
-        </button>
-      </div>
+        <!-- Mensagem -->
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Mensagem</mat-label>
+          <textarea
+            matInput
+            rows="3"
+            placeholder="Insira sua mensagem"
+            [(ngModel)]="formData.message"
+            name="message"
+            required
+          ></textarea>
+        </mat-form-field>
 
-      <!-- Informações seguras -->
-      <p class="info-secure">
-        <mat-icon color="primary">lock</mat-icon>
-        Suas informações estão seguras conosco.
-      </p>
-    </form>
+        <!-- Botão de envio -->
+        <div class="button-container">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            class="submit-button"
+          >
+            ENVIAR
+          </button>
+        </div>
+
+        <!-- Informações seguras -->
+        <p class="info-secure">
+          <mat-icon color="primary">lock</mat-icon>
+          Suas informações estão seguras conosco.
+        </p>
+      </form>
+    </div>
   </div>
 </div>

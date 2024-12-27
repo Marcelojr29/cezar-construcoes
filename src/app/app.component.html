@@ -1,39 +1,42 @@
-<app-navbar></app-navbar>
+<header>
+  <app-navbar></app-navbar>
+</header>
 
-<app-home id="inicio"></app-home>
+<main>
+    <app-home id="inicio"></app-home>
 
-<app-about id="sobre"></app-about>
+    <app-contact id="contato"></app-contact>
 
-<app-services id="servicos" class="section-sobre"></app-services>
+    <app-services id="servicos"></app-services>
 
-<app-portfolio id="portfolio" class="section-sobre"></app-portfolio>
+    <app-about id="sobre"></app-about>
 
-<app-team id="equipe"></app-team>
+    <app-team id="equipe"></app-team>
+</main>
 
-<app-contact id="contato"></app-contact>
-
-<app-footer></app-footer>
+  <app-footer></app-footer>
 
 <a
   *ngIf="isVisible"
   class="back-to-top"
   (click)="scrollToTop()"
-  aria-label="Back To Top"
+  aria-label="scroll to to of the page"
 >
   <img
     src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Ionicons_chevron-up-sharp.svg"
-    alt="Chevron"
+    alt="Back to top icon"
   />
 </a>
 
 <a
   href="https://wa.me/5592992969909"
   target="_blank"
+  rel="noopener noreferrer"
   class="whatsapp-button"
   aria-label="Contact Us On WhatsApp"
 >
   <img
     src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-    alt="WhatsApp"
+    alt="WhatsApp icon"
   />
 </a>
