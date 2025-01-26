@@ -8,17 +8,17 @@ import { Component } from '@angular/core';
 export class AboutComponent {
   values = [
     {
-      icon: 'assets/icons/mission.svg',
+      icon: 'assets/icons/missão.png',
       title: 'Missão',
       description: 'Oferecer soluções inovadoras e sustentáveis para projetos de construção.',
     },
     {
-      icon: 'assets/icons/vision.svg',
+      icon: 'assets/icons/visão.png',
       title: 'Visão',
       description: 'Ser referência no mercado, reconhecida por qualidade e confiabilidade.',
     },
     {
-      icon: 'assets/icons/values.svg',
+      icon: 'assets/icons/valor.png',
       title: 'Valores',
       description: 'Ética, excelência e compromisso com a satisfação do cliente.',
     },

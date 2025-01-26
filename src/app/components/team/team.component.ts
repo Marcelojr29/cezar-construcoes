@@ -18,21 +18,21 @@ export class TeamComponent {
       name: 'Cezar Duque',
       role: 'Mestre de Obras',
       description:
-        'Especialista em BIM, possui experiência em projetos residenciais e industriais.',
+        'Especialista em BIM, com vasta experiência em projetos residenciais e industriais.',
       photo: 'assets/images/Cezar.png',
     },
     {
       name: 'Charlie Duque',
       role: 'Eletricista',
       description:
-        'Com experiência em construções e especialista em levantamento e análise topográfica.',
+        'Especialista em instalações elétricas e análise topográfica para projetos de grande porte.',
       photo: 'assets/images/Charlie.png',
     },
     {
       name: 'Rodrigo Cassiano',
       role: 'Arquiteto',
       description:
-        'Arquiteto experiente em design de interiores e planejamento urbano, com foco em sustentabilidade e inovação.',
+        'Com foco em design sustentável, Rodrigo transforma ideias em projetos inovadores.',
       photo: 'assets/images/Rodrigo.png',
     },
   ];

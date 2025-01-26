@@ -2,35 +2,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 1rem;
-  background-color: #f8f9fa;
+  padding: 50px;
+  background: linear-gradient(to bottom, #f7f9fc, #e6ecf3);
 
   .contact-container {
     display: flex;
-    max-width: 900px;
+    gap: 40px;
     width: 100%;
+    max-width: 1200px;
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+    .contact-left,
+    .contact-right {
+      flex: 1;
+    }
 
     .contact-left {
-      flex: 1;
-      padding: 2rem;
-      background-color: #f57c00;
-      color: #fff;
-      border-radius: 8px 0 0 8px;
+      padding-right: 20px;
+      border-right: 1px solid #ddd;
 
       h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-        font-weight: bold;
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 20px;
       }
 
       p {
         font-size: 1rem;
-        line-height: 1.5;
-        margin-bottom: 1.5rem;
+        color: #666;
+        margin-bottom: 30px;
       }
 
       ul {
@@ -39,80 +42,120 @@
 
         li {
           display: flex;
-          align-items: center;
-          margin-bottom: 1rem;
+          align-items: flex-start;
+          gap: 20px;
+          margin-bottom: 20px;
 
-          .icon {
-            margin-right: 1rem;
-            font-size: 1.5rem;
+          .icon-wrapper {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+
+          .content-wrapper {
+            strong {
+              display: block;
+              font-size: 1.2rem;
+              color: #333;
+              margin-bottom: 5px;
+            }
+
+            p {
+              font-size: 0.9rem;
+              color: #666;
+            }
           }
         }
       }
     }
 
     .contact-right {
-      flex: 1;
-      padding: 2rem;
+      padding-left: 20px;
 
-      .contact-title {
-        font-size: 1.8rem;
-        text-align: center;
-        margin-bottom: 1.5rem;
-        color: #333;
+      .contact-header {
+        margin-bottom: 30px;
 
-        strong {
-          color: #f57c00;
+        h1 {
+          font-size: 2.2rem;
+          color: #333;
+
+          span {
+            color: #f57c00;
+          }
+        }
+
+        p {
+          font-size: 1rem;
+          color: #666;
+          margin-top: 10px;
         }
       }
 
-      .contact-form {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
+      .form-group {
+        margin-bottom: 20px;
 
-        .input-field {
+        label {
+          display: block;
+          font-weight: bold;
+          margin-bottom: 8px;
+          color: #444;
+        }
+
+        input,
+        textarea {
           width: 100%;
-        }
+          padding: 10px 15px;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          font-size: 1rem;
+          color: #333;
 
-        .button-container {
-          display: flex;
-          justify-content: center;
-
-          .submit-button {
-            width: 100%;
-            font-weight: bold;
-            background-color: #f57c00;
+          &:focus {
+            border-color: #f57c00;
           }
         }
 
-        .info-secure {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 0.9rem;
-          color: #666;
-          margin-top: 1rem;
+        textarea {
+          resize: none;
+        }
+      }
 
-          mat-icon {
-            margin-right: 0.5rem;
-          }
+      .submit-button {
+        width: 100%;
+        padding: 12px;
+        background: #f57c00;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &:hover {
+          background: #d35400;
         }
       }
     }
   }
-}
 
-// Responsividade
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
 
-    .contact-left {
-      border-radius: 8px 8px 0 0;
-    }
+      .contact-left,
+      .contact-right {
+        border: none;
+        padding: 0;
+      }
 
-    .contact-right {
-      border-radius: 0 0 8px 8px;
+      .contact-left {
+        margin-bottom: 30px;
+      }
     }
   }
 }

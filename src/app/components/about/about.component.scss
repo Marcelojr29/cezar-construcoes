@@ -1,106 +1,175 @@
-.about {
-  background-color: #ffffff;
-  padding: 4rem 2rem;
+// @import 'variables';
 
-  .about-container {
+.about {
+  background-color: #f7f7f7;
+  font-family: 'Roboto', sans-serif;
+
+  .about-header {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background-color: #000000;
+    color: #fff;
+
+    .logo {
+      width: 100px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+      span.highlight {
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .about-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 2rem;
+
+    .about-content {
+      flex: 1;
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #ff740b;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #333;
+        line-height: 1.6;
+      }
+    }
 
     .about-image {
       flex: 1;
       max-width: 500px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
 
       img {
         width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 8px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
       }
     }
+  }
 
-    .about-content {
-      flex: 1;
-      padding-left: 1rem;
+  .values-section {
+    background-color: #fff;
+    padding: 4rem 2rem;
 
-      .highlight {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #ff740b;
-        margin-bottom: 1.5rem;
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 2rem;
+    }
+
+    .values-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .card {
+        text-align: center;
+        padding: 2rem;
+        background-color: #f9f9f9;
+        border: 1px solid #eaeaea;
+        border-radius: 10px;
+        transition: box-shadow 0.3s ease;
+
+        &:hover {
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-icon {
+          width: 150px;
+          margin-bottom: 1rem;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+          color: #ff740b;
+        }
+
+        p {
+          font-size: 1rem;
+          color: #666;
+        }
       }
+    }
+  }
 
-      p {
-        font-size: 1.1rem;
-        color: #333333;
-        line-height: 1.6;
-        margin-bottom: 1rem;
-      }
+  .call-to-action {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #ff740b;
+    color: #fff;
 
-      .slider {
-        position: relative;
-        margin: auto;
-        padding: 12px 18px;
-        transition: all 0.2s ease;
-        border: none;
-        background: none;
-        cursor: pointer;
-      }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
 
-      .slider span {
-        font-size: clamp(1.2rem, 1.5vw + 1rem, 2rem);
-      }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
 
-      .slider:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        border-radius: 50px;
-        background: var(--color-slide);
-        width: 45px;
-        height: 45px;
-        transition: all 0.3s ease;
-      }
+    .cta-button {
+      background-color: #fff;
+      color: #ff740b;
+      border: none;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
 
-      .slider span {
-        position: relative;
-        font-family: var(--fonte-pequena);
-        font-size: 18px;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        color: #333333;
-      }
-
-      .slider svg {
-        position: relative;
-        top: 0;
-        margin-left: 10px;
+      svg {
         fill: none;
+        stroke: #ff740b;
+        stroke-width: 2;
         stroke-linecap: round;
         stroke-linejoin: round;
-        stroke: var(--color-svg);
-        stroke-width: 2;
-        transform: translateX(-5px);
-        transition: all 0.3s ease;
+        transition: transform 0.3s ease;
       }
 
-      .slider:hover:before {
-        width: 100%;
-        background: var(--color-slide);
+      &:hover {
+        background-color: #ffd1a9;
+        transform: scale(1.05);
+
+        svg {
+          transform: translateX(5px);
+        }
       }
 
-      .slider:hover svg {
-        transform: translateX(0);
-        stroke: var(--color-svg);
-      }
-
-      .slider:active {
+      &:active {
         transform: scale(0.95);
       }
     }

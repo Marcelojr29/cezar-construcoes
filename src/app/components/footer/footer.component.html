@@ -1,29 +1,46 @@
 <div class="footer">
-  <div class="container-footer">
+  <div class="footer-container">
+    <!-- Logo -->
     <div class="footer-logo">
       <img src="assets/icons/cezar_logo_branco.png" alt="Cezar Construções" />
     </div>
+
+    <!-- Navigation Menu -->
     <div class="footer-menu">
-      <nav class="footer-nav">
+      <nav>
         <ul>
           <li><a (click)="scrollToSection('inicio')">Início</a></li>
           <li><a (click)="scrollToSection('sobre')">Sobre</a></li>
           <li><a (click)="scrollToSection('servicos')">Serviços</a></li>
-          <li><a (click)="scrollToSection('portfolio')">Portfolio</a></li>
-          <li><a (click)="scrollToSection('equipe')">Equipe</a></li>
           <li><a (click)="scrollToSection('contato')">Contato</a></li>
+          <li><a (click)="scrollToSection('equipe')">Equipe</a></li>
         </ul>
       </nav>
     </div>
+
+    <!-- Social Media -->
     <div class="footer-social">
       <ul>
-        <li><a href="#" class="insta"><i class="icon-instagram"></i>@cezar_construc</a></li>
-        <li><a href="#"><i class="icon-facebook"></i>Facebook</a></li>
+        <li><a href="#" target="_blank"><i class="icon-instagram"></i> Instagram</a></li>
+        <li><a href="#" target="_blank"><i class="icon-facebook"></i> Facebook</a></li>
+        <li><a href="#" target="_blank"><i class="icon-linkedin"></i> LinkedIn</a></li>
       </ul>
     </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h3>Assine nossa Newsletter</h3>
+      <p>Receba nossas novidades diretamente no seu e-mail.</p>
+      <form (submit)="subscribeNewsletter()">
+        <input type="email" placeholder="Seu e-mail" required />
+        <button type="submit">Assinar</button>
+      </form>
+    </div>
   </div>
-  <div class="footer-credits">
-    <p>&copy; 2024 Todos os direitos reservados.</p>
-    <p>Desenvolvido por M&R inc.</p>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Cezar Construções. Todos os direitos reservados.</p>
+    <p>Desenvolvido por <strong>Marcelo Junior</strong></p>
   </div>
 </div>

@@ -1,107 +1,109 @@
 <div class="contact-wrapper">
-  <!-- Seção Principal -->
   <div class="contact-container">
-
-    <!-- Aba lateral -->
+    <!-- Lado esquerdo: Planejamento -->
     <div class="contact-left">
-      <h2>Por que escolher a CEZAR CONSTRUÇÕES?</h2>
-      <p>Com mais de 20 anos de experiência, oferecemos:</p>
+      <h2>Do planejamento da sua obra à execução</h2>
+      <p>
+        Na PROFRAME, estamos comprometidos em tornar seu projeto uma realidade,
+        oferecendo uma cartela completa de serviços que atendem todas as suas necessidades de construção e reforma.
+      </p>
       <ul>
         <li>
-          <mat-icon color="primary" class="icon">construction</mat-icon>
-          Construção de alto padrão
+          <div class="icon-wrapper">
+            <img src="assets/icons/home.png" alt="Residenciais" />
+          </div>
+          <div class="content-wrapper">
+            <strong>Obras residenciais de alto padrão</strong>
+            <p>Construções residenciais exclusivas e sofisticadas, elevando o padrão em cada detalhe.</p>
+          </div>
         </li>
         <li>
-          <mat-icon color="primary" class="icon">engineering</mat-icon>
-          Equipe qualificada e projetos personalizados
+          <div class="icon-wrapper">
+            <img src="assets/icons/building.png" alt="Comerciais" />
+          </div>
+          <div class="content-wrapper">
+            <strong>Obras comerciais</strong>
+            <p>Construções comerciais inovadoras e funcionais, criando espaços que impulsionam seus negócios.</p>
+          </div>
         </li>
         <li>
-          <mat-icon color="primary" class="icon">verified</mat-icon>
-          Garantia de qualidade e satisfação
+          <div class="icon-wrapper">
+            <img src="assets/icons/garage.png" alt="Industriais" />
+          </div>
+          <div class="content-wrapper">
+            <strong>Obras industriais</strong>
+            <p>Alta performance e soluções robustas para aumentar a eficiência operacional.</p>
+          </div>
         </li>
         <li>
-          <mat-icon color="primary" class="icon">schedule</mat-icon>
-          Entrega dentro do prazo
+          <div class="icon-wrapper">
+            <img src="assets/icons/safety.png" alt="Reformas" />
+          </div>
+          <div class="content-wrapper">
+            <strong>Reformas em geral</strong>
+            <p>Reformas versáteis para transformar ambientes, com soluções personalizadas para atender às suas necessidades.</p>
+          </div>
         </li>
       </ul>
-      <p>Transforme seu sonho em realidade com a nossa equipe!</p>
     </div>
 
-    <!-- Formulário -->
+    <!-- Lado direito: Formulário -->
     <div class="contact-right">
-      <h2 class="contact-title">
-        Faça seu orçamento com a <strong>CEZAR CONSTRUÇÕES</strong>!
-      </h2>
-
+      <div class="contact-header">
+        <h1>Entre em contato com a <span>CEZAR CONSTRUÇÕES</span></h1>
+        <p>Preencha o formulário abaixo e nossa equipe entrará em contato com você rapidamente.</p>
+      </div>
       <form class="contact-form" (ngSubmit)="onSubmit()">
         <!-- Nome -->
-        <mat-form-field appearance="outline" class="input-field">
-          <mat-label>Nome</mat-label>
+        <div class="form-group">
+          <label for="name">Nome</label>
           <input
-            matInput
-            placeholder="Insira seu nome completo"
+            id="name"
+            type="text"
+            placeholder="Digite seu nome completo"
             [(ngModel)]="formData.name"
             name="name"
             required
           />
-        </mat-form-field>
-
-        <!-- Email -->
-        <mat-form-field appearance="outline" class="input-field">
-          <mat-label>E-mail</mat-label>
+        </div>
+        <!-- E-mail -->
+        <div class="form-group">
+          <label for="email">E-mail</label>
           <input
-            matInput
-            placeholder="Digite seu melhor e-mail"
+            id="email"
             type="email"
+            placeholder="Digite seu e-mail"
             [(ngModel)]="formData.email"
             name="email"
             required
           />
-        </mat-form-field>
-
+        </div>
         <!-- Telefone -->
-        <mat-form-field appearance="outline" class="input-field">
-          <mat-label>Telefone</mat-label>
+        <div class="form-group">
+          <label for="phone">Telefone</label>
           <input
-            matInput
-            placeholder="Ex: (92) 91234-5678"
+            id="phone"
             type="tel"
+            placeholder="Ex: (99) 99999-9999"
             [(ngModel)]="formData.phone"
             name="phone"
             required
           />
-        </mat-form-field>
-
+        </div>
         <!-- Mensagem -->
-        <mat-form-field appearance="outline" class="input-field">
-          <mat-label>Mensagem</mat-label>
+        <div class="form-group">
+          <label for="message">Mensagem</label>
           <textarea
-            matInput
-            rows="3"
-            placeholder="Insira sua mensagem"
+            id="message"
+            rows="5"
+            placeholder="Digite sua mensagem"
             [(ngModel)]="formData.message"
             name="message"
             required
           ></textarea>
-        </mat-form-field>
-
-        <!-- Botão de envio -->
-        <div class="button-container">
-          <button
-            mat-raised-button
-            color="primary"
-            type="submit"
-            class="submit-button"
-          >
-            ENVIAR
-          </button>
         </div>
-
-        <!-- Informações seguras -->
-        <p class="info-secure">
-          <mat-icon color="primary">lock</mat-icon>
-          Suas informações estão seguras conosco.
-        </p>
+        <!-- Botão -->
+        <button type="submit" class="submit-button">Enviar</button>
       </form>
     </div>
   </div>

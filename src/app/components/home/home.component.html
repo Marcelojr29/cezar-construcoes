@@ -1,20 +1,22 @@
+<!-- Redesigned Home Component -->
 <main class="home-container">
-  <div class="container-home">
-      <div class="conteudo-inicio" data-aos="fade-up" data-aos-duration="1000">
-          <div class="title">
-              <h1>Ajudamos você a </h1>
-              <h1 class="highlight">Construir</h1>
-              <h1>os seus sonhos.</h1>
-          </div>
-          <button class="slider" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-              <span (click)="scrollToContact('contato')">Faça um orçamento</span>
-              <svg width="15px" height="10px" viewBox="0 0 13 10">
-                  <path d="M1,5 L11,5"></path>
-                  <polyline points="8 1 12 5 8 9"></polyline>
-              </svg>
-          </button>
-      </div>
+  <div class="home-content">
+    <!-- Text Section -->
+    <div class="text-section" data-aos="fade-up" data-aos-duration="1000">
+      <h1>Bem-vindo à <span class="highlight">Cezar Construções</span></h1>
+      <p>Transformamos seus sonhos em realidade com qualidade, inovação e confiança.</p>
+      <button class="cta-button" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" (click)="scrollToContact('contato')">
+        Faça um orçamento
+        <svg width="15px" height="10px" viewBox="0 0 13 10">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Image Section -->
+    <div class="image-section" data-aos="fade-left" data-aos-duration="1000">
+      <img src="/assets/icons/cezar_logo_branco.png" alt="Construção moderna">
+    </div>
   </div>
 </main>
-
-
