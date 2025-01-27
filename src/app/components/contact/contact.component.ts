@@ -20,7 +20,6 @@ export class ContactComponent {
       console.log('Formulário enviado com sucesso:', this.formData);
       alert('Formulário enviado com sucesso!');
 
-      // Limpa os campos após o envio
       this.formData = { name: '', email: '', phone: '', message: '' };
     } else {
       alert('Por favor, preencha todos os campos obrigatórios.');

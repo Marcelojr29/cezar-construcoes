@@ -27,12 +27,9 @@ export class NavbarComponent {
         behavior: 'smooth',
       });
     }
-    this.isMenuOpen = false; // Close menu after navigation
-    const menu = document.querySelector('.navbar-menu');
-    const toggle = document.querySelector('.menu-toggle');
-    if (menu && toggle) {
-      menu.classList.remove('active');
-      toggle.classList.remove('active');
+
+    if (this.isMenuOpen) {
+      this.toggleMenu();
     }
   }
 }

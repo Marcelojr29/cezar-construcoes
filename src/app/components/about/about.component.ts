@@ -10,17 +10,17 @@ export class AboutComponent {
     {
       icon: 'assets/icons/missão.png',
       title: 'Missão',
-      description: 'Oferecer soluções inovadoras e sustentáveis para projetos de construção.',
+      description: 'Transformar sonhos em realidade com soluções inovadoras, sustentáveis e de qualidade na construção civil.',
     },
     {
       icon: 'assets/icons/visão.png',
       title: 'Visão',
-      description: 'Ser referência no mercado, reconhecida por qualidade e confiabilidade.',
+      description: 'Ser referência em construção civil, reconhecida pela excelência, inovação e impacto positivo na sociedade.',
     },
     {
       icon: 'assets/icons/valor.png',
       title: 'Valores',
-      description: 'Ética, excelência e compromisso com a satisfação do cliente.',
+      description: 'Agimos com ética, transparência, respeito e compromisso, priorizando qualidade, inovação e sustentabilidade.',
     },
   ];
 

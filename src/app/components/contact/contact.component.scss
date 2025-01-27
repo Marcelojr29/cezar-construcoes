@@ -5,6 +5,10 @@
   padding: 50px;
   background: linear-gradient(to bottom, #f7f9fc, #e6ecf3);
 
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+
   .contact-container {
     display: flex;
     gap: 40px;
@@ -15,6 +19,11 @@
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 20px;
+    }
+
     .contact-left,
     .contact-right {
       flex: 1;
@@ -23,6 +32,12 @@
     .contact-left {
       padding-right: 20px;
       border-right: 1px solid #ddd;
+
+      @media (max-width: 768px) {
+        border-right: none;
+        padding-right: 0;
+        margin-bottom: 30px;
+      }
 
       h2 {
         font-size: 2rem;
@@ -34,6 +49,10 @@
         font-size: 1rem;
         color: #666;
         margin-bottom: 30px;
+
+        strong {
+          color: #f57c00;
+        }
       }
 
       ul {
@@ -76,6 +95,10 @@
 
     .contact-right {
       padding-left: 20px;
+
+      @media (max-width: 768px) {
+        padding-left: 0;
+      }
 
       .contact-header {
         margin-bottom: 30px;
@@ -139,22 +162,6 @@
         &:hover {
           background: #d35400;
         }
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .contact-container {
-      flex-direction: column;
-
-      .contact-left,
-      .contact-right {
-        border: none;
-        padding: 0;
-      }
-
-      .contact-left {
-        margin-bottom: 30px;
       }
     }
   }

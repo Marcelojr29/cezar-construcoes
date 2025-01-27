@@ -20,7 +20,7 @@
       cursor: pointer;
 
       .logo {
-        height: 95px;
+        height: 85px;
         transition: transform 0.3s ease;
       }
 
@@ -42,6 +42,7 @@
           color: #ffffff;
           font-weight: 500;
           transition: color 0.3s ease;
+          cursor: pointer;
 
           &:hover {
             color: #ff740b;
@@ -49,7 +50,41 @@
         }
       }
 
+      @media (max-width: 480px) {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1.5rem;
+        text-align: center;
+
+        &.active {
+          display: flex;
+        }
+      }
+
       @media (max-width: 768px) {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1.5rem;
+        text-align: center;
+
+        &.active {
+          display: flex;
+        }
+      }
+
+      @media (max-width: 1299px) {
         position: absolute;
         top: 100%;
         left: 0;
@@ -77,11 +112,32 @@
         width: 25px;
         height: 3px;
         background: #ffffff;
+        border-radius: 2px;
         transition: transform 0.3s ease;
+      }
+
+      @media (max-width: 480px) {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        transform: translate(-50%, -50%);
       }
 
       @media (max-width: 768px) {
         display: flex;
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+      }
+
+      @media (max-width: 1299px) {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        transform: translate(-50%, -50%);
       }
 
       &.active span:nth-child(1) {

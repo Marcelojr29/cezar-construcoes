@@ -7,6 +7,11 @@
     url('/assets/images/cezar-const.png') no-repeat center center/cover;
   color: #ffffff;
   text-align: center;
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 4rem 1rem;
+  }
 }
 
 .home-content {
@@ -15,6 +20,11 @@
   gap: 2rem;
   max-width: 1200px;
   width: 90%;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
 
 .text-section {
@@ -29,6 +39,10 @@
     margin-bottom: 1rem;
     line-height: 1.2;
 
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+
     .highlight {
       color: #ff740b;
     }
@@ -38,6 +52,10 @@
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 
   .cta-button {
