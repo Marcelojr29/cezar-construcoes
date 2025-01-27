@@ -1,37 +1,95 @@
 <div class="footer">
   <div class="footer-container">
+    <!-- Logo e Descrição -->
     <div class="footer-logo">
       <img src="assets/icons/cezar_logo_branco.png" alt="Cezar Construções" />
+      <p>
+        Construindo sonhos e transformando ideias em realidade.
+        <br />
+        <strong>Entre em contato e saiba mais sobre nossos serviços.</strong>
+      </p>
     </div>
+
+    <!-- Informações de Contato -->
+    <div class="footer-info">
+      <h3>Contato</h3>
+      <p><i class="fas fa-phone"></i> (92) 99296-9909</p>
+      <p><i class="fas fa-envelope"></i> cezarino@cezarconstrucoes.com.br</p>
+      <p>
+        <i class="fas fa-map-marker-alt"></i> R. Curiato, 73 - Cidade Nova,
+        Manaus - AM, 69090-349
+      </p>
+    </div>
+
+    <!-- Links de Navegação -->
     <div class="footer-menu">
+      <h3>Menu</h3>
       <nav>
         <ul>
-          <li><a (click)="scrollToSection('inicio')">Início</a></li>
-          <li><a (click)="scrollToSection('sobre')">Sobre</a></li>
-          <li><a (click)="scrollToSection('servicos')">Serviços</a></li>
-          <li><a (click)="scrollToSection('contato')">Contato</a></li>
-          <li><a (click)="scrollToSection('equipe')">Equipe</a></li>
+          <li>
+            <a (click)="scrollToSection('inicio')">
+              <i class="fab fa-instagram"></i>
+              Início
+            </a>
+          </li>
+          <li>
+            <a (click)="scrollToSection('sobre')">
+              <i class="fab fa-instagram"></i>
+              Sobre
+            </a>
+          </li>
+          <li>
+            <a (click)="scrollToSection('servicos')">
+              <i class="fab fa-instagram"></i>
+              Serviços
+            </a>
+          </li>
+          <li>
+            <a (click)="scrollToSection('contato')">
+              <i class="fab fa-instagram"></i>
+              Contato
+            </a>
+          </li>
+          <li>
+            <a (click)="scrollToSection('equipe')">
+              <i class="fab fa-instagram"></i>
+              Equipe
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
+
+    <!-- Redes Sociais -->
     <div class="footer-social">
-      <ul>
-        <li><a href="#" target="_blank"><i class="icon-instagram"></i> Instagram</a></li>
-        <li><a href="#" target="_blank"><i class="icon-facebook"></i> Facebook</a></li>
-        <li><a href="#" target="_blank"><i class="icon-linkedin"></i> LinkedIn</a></li>
-      </ul>
-    </div>
-    <div class="footer-newsletter">
-      <h3>Assine nossa Newsletter</h3>
-      <p>Receba nossas novidades diretamente no seu e-mail.</p>
-      <form (submit)="subscribeNewsletter()">
-        <input type="email" placeholder="Seu e-mail" required />
-        <button type="submit">Assinar</button>
-      </form>
+      <h3>Nos Siga</h3>
+      <nav>
+        <ul>
+          <li>
+            <a href="#" target="_blank">
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <i class="fab fa-facebook"></i> Facebook
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
+
+  <!-- Rodapé -->
   <div class="footer-bottom">
-    <p>&copy; 2025 Cezar Construções. Todos os direitos reservados.</p>
-    <p>Desenvolvido por <strong>Marcelo Junior</strong></p>
+    <p>&copy; {{year}} Cezar Construções. Todos os direitos reservados.</p>
+    <p>
+      Desenvolvido por <strong>Marcelo Junior</strong> ({{version}})
+    </p>
   </div>
 </div>

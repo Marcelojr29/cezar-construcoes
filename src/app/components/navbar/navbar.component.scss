@@ -22,6 +22,14 @@
       .logo {
         height: 85px;
         transition: transform 0.3s ease;
+
+        @media (max-width: 768px) {
+          height: 65px; // Tamanho menor para telas até 768px
+        }
+
+        @media (max-width: 480px) {
+          height: 44px; // Tamanho ainda menor para telas até 480px
+        }
       }
 
       &:hover .logo {
@@ -50,40 +58,6 @@
         }
       }
 
-      @media (max-width: 480px) {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        display: none;
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1.5rem;
-        text-align: center;
-
-        &.active {
-          display: flex;
-        }
-      }
-
-      @media (max-width: 768px) {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        display: none;
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1.5rem;
-        text-align: center;
-
-        &.active {
-          display: flex;
-        }
-      }
-
       @media (max-width: 1299px) {
         position: absolute;
         top: 100%;
@@ -105,7 +79,7 @@
     .menu-toggle {
       display: none;
       flex-direction: column;
-      gap: 0.4rem;
+      gap: 0.3rem;
       cursor: pointer;
 
       span {
@@ -114,30 +88,6 @@
         background: #ffffff;
         border-radius: 2px;
         transition: transform 0.3s ease;
-      }
-
-      @media (max-width: 480px) {
-        display: flex;
-        position: absolute;
-        top: 50%;
-        left: 90%;
-        transform: translate(-50%, -50%);
-      }
-
-      @media (max-width: 768px) {
-        display: flex;
-        position: absolute;
-        top: 50%;
-        left: 90%;
-        transform: translate(-50%, -50%);
-      }
-
-      @media (max-width: 1299px) {
-        display: flex;
-        position: absolute;
-        top: 50%;
-        left: 90%;
-        transform: translate(-50%, -50%);
       }
 
       &.active span:nth-child(1) {
@@ -151,6 +101,30 @@
       &.active span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
       }
+
+      @media (max-width: 1299px) {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+      }
+
+      @media (max-width: 700px) and (min-width: 420px) {
+        left: 80%; // Ajusta para ficar mais próximo ao centro
+      }
+
+      @media (max-width: 420px) {
+        left: 70%; // Centraliza ainda mais para telas bem pequenas
+      }
     }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem 1rem; // Reduz o padding da navbar para telas menores
+  }
+
+  @media (max-width: 420px) {
+    padding: 0.5rem 0.8rem; // Padding ainda menor para telas muito pequenas
   }
 }
