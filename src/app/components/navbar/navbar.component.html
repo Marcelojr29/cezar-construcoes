@@ -1,9 +1,11 @@
-<!-- Redesigned Navbar -->
 <nav class="navbar">
   <div class="navbar-container">
+    <!-- Logo Section -->
     <div class="navbar-logo" (click)="scrollToSection('inicio')">
       <img src="assets/icons/cezar_logo_branco.png" alt="Cezar Construções Logo" class="logo" />
     </div>
+
+    <!-- Main Menu -->
     <ul class="navbar-menu">
       <li><a (click)="scrollToSection('inicio')">Início</a></li>
       <li><a (click)="scrollToSection('sobre')">Sobre</a></li>
@@ -11,6 +13,8 @@
       <li><a (click)="scrollToSection('contato')">Contato</a></li>
       <li><a (click)="scrollToSection('equipe')">Equipe</a></li>
     </ul>
+
+    <!-- Mobile Menu Toggle -->
     <div class="menu-toggle" (click)="toggleMenu()">
       <span></span>
       <span></span>
