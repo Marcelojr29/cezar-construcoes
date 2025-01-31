@@ -50,17 +50,17 @@
         <h1>Entre em contato com a <span>CEZAR CONSTRUÇÕES</span></h1>
         <p>Preencha o formulário abaixo e nossa equipe entrará em contato com você rapidamente.</p>
       </div>
-      <form class="contact-form" (ngSubmit)="onSubmit()">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
         <div class="form-group">
           <label for="name">Nome</label>
           <input
             id="name"
             type="text"
             placeholder="Digite seu nome completo"
-            [(ngModel)]="formData.name"
-            name="name"
+            formControlName="name"
             required
           />
+          <mat-error *ngIf="contactForm.get('name')?.hasError('required')">Nome é obrigatório.</mat-error>
         </div>
         <div class="form-group">
           <label for="email">E-mail</label>
@@ -68,10 +68,11 @@
             id="email"
             type="email"
             placeholder="Digite seu e-mail"
-            [(ngModel)]="formData.email"
-            name="email"
+            formControlName="email"
             required
           />
+          <mat-error *ngIf="contactForm.get('email')?.hasError('required')">E-mail é obrigatório.</mat-error>
+          <mat-error *ngIf="contactForm.get('email')?.hasError('email')">E-mail inválido.</mat-error>
         </div>
         <div class="form-group">
           <label for="phone">Telefone</label>
@@ -79,10 +80,10 @@
             id="phone"
             type="tel"
             placeholder="Ex: (99) 99999-9999"
-            [(ngModel)]="formData.phone"
-            name="phone"
+            formControlName="phone"
             required
           />
+          <mat-error *ngIf="contactForm.get('phone')?.hasError('required')">Telefone é obrigatório.</mat-error>
         </div>
         <div class="form-group">
           <label for="message">Mensagem</label>
@@ -90,12 +91,14 @@
             id="message"
             rows="5"
             placeholder="Digite sua mensagem"
-            [(ngModel)]="formData.message"
-            name="message"
+            formControlName="message"
             required
           ></textarea>
+          <mat-error *ngIf="contactForm.get('message')?.hasError('required')">Mensagem é obrigatória.</mat-error>
         </div>
-        <button type="submit" class="submit-button">Enviar</button>
+        <button type="submit" class="submit-button" [disabled]="isLoading">
+          {{ isLoading ? 'Enviando...' : 'Enviar' }}
+        </button>
       </form>
     </div>
   </div>

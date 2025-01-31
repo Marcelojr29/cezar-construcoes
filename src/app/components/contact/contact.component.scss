@@ -146,6 +146,12 @@
         textarea {
           resize: none;
         }
+
+        mat-error {
+          color: #d32f2f;
+          font-size: 0.875rem;
+          margin-top: 5px;
+        }
       }
 
       .submit-button {
@@ -161,6 +167,11 @@
 
         &:hover {
           background: #d35400;
+        }
+
+        &:disabled {
+          background: #ccc;
+          cursor: not-allowed;
         }
       }
     }
